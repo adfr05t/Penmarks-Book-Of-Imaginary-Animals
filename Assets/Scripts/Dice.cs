@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    [SerializeField] Dice2 dice;
+    public DiceData dice;
     private SpriteRenderer rend;
+    public int myResult;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class Dice : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            dice.Roll();
+            myResult = dice.Roll();
             rend.sprite = dice.resultSprite;
         }
     }
@@ -25,6 +26,5 @@ public class Dice : MonoBehaviour
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
-
     }
 }

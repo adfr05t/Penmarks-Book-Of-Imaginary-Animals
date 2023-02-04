@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dice", menuName = "Dice")]
-public class Dice2 : ScriptableObject
+[CreateAssetMenu(fileName = "NewDice", menuName = "Dice")]
+public class DiceData : ScriptableObject
 {
-    public int result;
+   // public int result;
     public Sprite[] artwork;
     public Sprite resultSprite;
 
-    public void Roll()
+    public int Roll()
     {
-        result = Random.Range(1, 7);
+        int result = Random.Range(1, 7);
         Debug.Log(result);
         resultSprite = artwork[result - 1];
+
+        return result;
     }
 }
