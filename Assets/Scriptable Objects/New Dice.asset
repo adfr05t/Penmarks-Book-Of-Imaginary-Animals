@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633aa61ee3c1d1a4da7bf98439c23057, type: 3}
+  m_Name: New Dice
+  m_EditorClassIdentifier: 
+  result: 2
+  artwork:
+  - {fileID: -1997750831, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
+  - {fileID: 184936891, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
+  - {fileID: 66364179, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
+  - {fileID: 196951303, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
+  - {fileID: 1403905058, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
+  - {fileID: -1095967080, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
+  resultSprite: {fileID: 184936891, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
