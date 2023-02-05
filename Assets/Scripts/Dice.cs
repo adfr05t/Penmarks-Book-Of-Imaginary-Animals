@@ -7,6 +7,7 @@ public class Dice : MonoBehaviour
     public DiceData dice;
     private SpriteRenderer rend;
     public int myResult;
+    private Vector3 mouseOffset;
 
     void Start()
     {
@@ -15,16 +16,26 @@ public class Dice : MonoBehaviour
 
     void Update()
     {
+        // For testing only
         if (Input.GetKeyDown(KeyCode.Space))
         {
             myResult = dice.Roll();
-            rend.sprite = dice.resultSprite;
+            rend.sprite = dice.artwork[myResult - 1];
         }
     }
 
-    private void OnMouseDrag()
+
+    void OnMouseDown()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
+
+        mouseOffset = transform.position - mousePosition;
+    }
+
+    void OnMouseDrag()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        transform.position = new Vector3(mousePosition.x + mouseOffset.x, mousePosition.y + mouseOffset.y, 0);
     }
 }

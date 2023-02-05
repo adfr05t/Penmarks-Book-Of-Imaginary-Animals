@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shield
   m_EditorClassIdentifier: 
   cardType: 0
-  diceTaken: 1
+  diceTaken: 3
   diceTakenSpecifier: 4
   nameOfCard: Shield
   description: 
