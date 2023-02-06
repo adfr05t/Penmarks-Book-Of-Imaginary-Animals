@@ -11,29 +11,41 @@ public class CardData : ScriptableObject
     public CardType cardType;
     public DiceTaken diceTaken;
     public int diceTakenSpecifier;
-    
-    public string nameOfCard;
-    public string description;
+    public bool actionStrengthEqualsDieNum;
 
-    public Sprite artwork;
+    public int actionStrength; // may or may not be dependant on dice result
+
+    //public string nameOfCard;
+    //public string description;
+
+    //public Sprite artwork;
+    public Opponent theOpponent;
 
     public int damageDealt;
+    
+    
 
-    // FUNCTIONS:
-    // check dice is valid
-    // carry out action
     public void Action(int numOnDie) // pass in dice result
     {
         if (DiceValid(numOnDie)) //pass dice result
         {
-            // switch () // action depends on card type enum selected
-            Debug.Log(nameOfCard + ": Action");
+            if (actionStrengthEqualsDieNum)
+            {
+                actionStrength = numOnDie;
+            }
+
+            switch (cardType)
+            {
+                case CardType.Attack:
+                    
+                    theOpponent.AdjustHealth(-actionStrength);
+                    break;
+            }
         }
         else
         {
             Debug.Log(numOnDie + " is not a valid number for this card");
         }
-        
     }
 
     bool DiceValid(int numOnDie)
@@ -73,4 +85,6 @@ public class CardData : ScriptableObject
 
         return validity;
     }
+
+
 }

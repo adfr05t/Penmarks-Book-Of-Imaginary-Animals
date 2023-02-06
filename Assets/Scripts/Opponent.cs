@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerHealth : MonoBehaviour
+// this script is almost identical to PlayerHealth.cs, currently
+
+public class Opponent : MonoBehaviour
 {
-    public int playerHealth;
+    public int health;
     public int maxHealth;
 
     [SerializeField] private TextMeshProUGUI healthDisplay;
 
+
     void Start()
     {
-        playerHealth = maxHealth;
+        health = maxHealth;
         UpdateHealthDisplay();
+        // display updated playerHealth 
     }
 
     public void AdjustHealth(int adjustment)
     {
-        playerHealth += adjustment;
+        health += adjustment;
         UpdateHealthDisplay();
         // display updated playerHealth 
     }
 
     private void UpdateHealthDisplay()
     {
-        healthDisplay.text = playerHealth.ToString();
+        healthDisplay.text = health.ToString();
     }
 }

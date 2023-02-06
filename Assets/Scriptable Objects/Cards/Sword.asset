@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   cardType: 0
-  diceTaken: 1
-  diceTakenSpecifier: 3
-  nameOfCard: Sword
-  description: 
-  artwork: {fileID: 0}
+  diceTaken: 0
+  diceTakenSpecifier: 0
+  actionStrengthEqualsDieNum: 1
+  actionStrength: 5
+  theOpponent: {fileID: 0}
   damageDealt: 0
