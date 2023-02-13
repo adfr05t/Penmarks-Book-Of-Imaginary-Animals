@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class OpponentTurn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private CombatController theCombatController;
+
     void Start()
     {
-        
+        theCombatController = GetComponent<CombatController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateState()
     {
-        
+        Debug.Log("Opponent plays turn");
+        EndTurn();
+    }
+
+    void EndTurn()
+    {
+        theCombatController.ChangeState(CombatController.CombatState.PlayerTurn);
+
     }
 }

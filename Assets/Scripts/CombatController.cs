@@ -5,19 +5,21 @@ using UnityEngine;
 public class CombatController : MonoBehaviour
 {
     //[SerializeField] private StartCombat;
-    //[SerializeField] private PlayerTurn;
-    //[SerializeField] private OpponentTurn
+    [SerializeField] private PlayerTurn playerTurn;
+    [SerializeField] private OpponentTurn opponentTurn;
     //[SerializeField] private WonBattle;
     //[SerializeField] private LostBattle;
 
-    public enum CombatState { Start, PlayerTurn, OpponentTurn, Won, Lost };
+    public enum CombatState { /*Start,*/ PlayerTurn, OpponentTurn, Won, Lost };
     public CombatState currentState;
 
     [SerializeField] CardData[] opponentCards;
 
     void Start()
     {
-        currentState = CombatState.Start; 
+       // currentState = CombatState.Start;
+        currentState = CombatState.PlayerTurn;
+
         // I'm not sure I even need a start state....
         // Roll player dice here 
     }
@@ -26,16 +28,16 @@ public class CombatController : MonoBehaviour
     {
         switch (currentState)
         {
-            case CombatState.Start:
+            //case CombatState.Start:
 
-                break;
+            //    break;
 
             case CombatState.PlayerTurn:
-
+                playerTurn.UpdateState();
                 break;
 
             case CombatState.OpponentTurn:
-
+                opponentTurn.UpdateState();
                 break;
 
             case CombatState.Won:

@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PlayerTurn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private CombatController theCombatController;
+    [SerializeField] GameObject cardsAndDice;
+
     void Start()
     {
-        
+        theCombatController = GetComponent<CombatController>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void UpdateState()
     {
-        
+            
+    }
+
+    // connect a UI button to this function
+    public void EndTurn()
+    {
+        Debug.Log("PLayer turn ended");
+        theCombatController.ChangeState(CombatController.CombatState.OpponentTurn);
     }
 }
