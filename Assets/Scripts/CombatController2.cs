@@ -34,9 +34,4 @@ public class CombatController2 : MonoBehaviour
     {
         cardsAndDiceScript.LerpCardsToNewPos(targetPos);
     }
-
-    void RollDice()
-    {
-            
-    }
 }

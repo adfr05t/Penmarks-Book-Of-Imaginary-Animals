@@ -15,14 +15,9 @@ public class OpponentDice : MonoBehaviour
     }
 
 
-    void Update()
+    public void Roll()
     {
-        // For testing only
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
             myResult = dice.Roll();
             rend.sprite = dice.artwork[myResult - 1];
-        }
     }
-
 }

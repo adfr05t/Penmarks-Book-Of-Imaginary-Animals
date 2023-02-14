@@ -4,40 +4,15 @@ using UnityEngine;
 
 public class CardsAndDice : MonoBehaviour
 {
-    //[SerializeField] private Vector2 neutralPos;
-    //[SerializeField] private Vector2 playerTurnPos;
-    //[SerializeField] private Vector2 opponentTurnPos;
-    // these might be in combatcontroller, instead
     private bool initialLerp = true;
+    [SerializeField] private PlayerDice[] thePlayerDice;
+    [SerializeField] private OpponentDice[] theOpponentDice;
 
-
-    void Start()
-    {
-        
-    }
-
-    //// for testing only
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Alpha1))
-    //    {
-    //        StartCoroutine(LerpFunction(opponentTurnPos));
-    //    }
-    //    else if (Input.GetKeyDown(KeyCode.Alpha2))
-    //    {
-    //        StartCoroutine(LerpFunction(neutralPos));
-    //    }
-    //    else if (Input.GetKeyDown(KeyCode.Alpha3))
-    //    {
-    //        StartCoroutine(LerpFunction(playerTurnPos));
-    //    }
-    //}
 
      public void LerpCardsToNewPos(Vector2 targetPos)
     {
         StartCoroutine(LerpFunction(targetPos));
     }
-
 
     
     public IEnumerator LerpFunction(Vector2 targetPos)
@@ -60,11 +35,18 @@ public class CardsAndDice : MonoBehaviour
         }
 
         transform.position = targetPos;
-        Debug.Log(lerpDuration);
+        RollAllDice();
     }
 
-    void RollDice()
+    void RollAllDice()
     {
-            
+        for (int i = 0; i < thePlayerDice.Length; i++)
+        {
+            thePlayerDice[i].Roll();
+        }
+        for (int i = 0; i < thePlayerDice.Length; i++)
+        {
+            theOpponentDice[i].Roll();
+        }
     }
 }

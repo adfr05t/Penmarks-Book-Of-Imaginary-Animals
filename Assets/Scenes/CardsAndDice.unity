@@ -2637,6 +2637,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489ae45e2d237ce49880730ef17ae095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thePlayerDice:
+  - {fileID: 134323004}
+  - {fileID: 1118154492}
+  - {fileID: 2128588277}
+  theOpponentDice:
+  - {fileID: 1989630469}
+  - {fileID: 1013601262}
+  - {fileID: 58022294}
 --- !u!1 &1610206572
 GameObject:
   m_ObjectHideFlags: 0

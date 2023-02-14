@@ -13,7 +13,7 @@ public class DiceData : ScriptableObject
     {
         int result = Random.Range(1, 7);
         Debug.Log(result);
-       // resultSprite = artwork[result - 1];
+        resultSprite = artwork[result - 1];
 
         return result;
     }
