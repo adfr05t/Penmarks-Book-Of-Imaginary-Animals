@@ -16,7 +16,7 @@ public class Card : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        int numOnDie = collision.GetComponent<Dice>().myResult;
+        int numOnDie = collision.GetComponent<PlayerDice>().myResult;
         card.Action(numOnDie);
     }
 }

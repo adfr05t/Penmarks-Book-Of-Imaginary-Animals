@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CardsAndDice : MonoBehaviour
 {
-    [SerializeField] private Vector2 neutralPos;
-    [SerializeField] private Vector2 playerTurnPos;
-    [SerializeField] private Vector2 opponentTurnPos;
+    //[SerializeField] private Vector2 neutralPos;
+    //[SerializeField] private Vector2 playerTurnPos;
+    //[SerializeField] private Vector2 opponentTurnPos;
     // these might be in combatcontroller, instead
     private bool initialLerp = true;
 
@@ -16,31 +16,31 @@ public class CardsAndDice : MonoBehaviour
         
     }
 
-    // for testing only
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            StartCoroutine(LerpFunction(opponentTurnPos));
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            StartCoroutine(LerpFunction(neutralPos));
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            StartCoroutine(LerpFunction(playerTurnPos));
-        }
-    }
+    //// for testing only
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Alpha1))
+    //    {
+    //        StartCoroutine(LerpFunction(opponentTurnPos));
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.Alpha2))
+    //    {
+    //        StartCoroutine(LerpFunction(neutralPos));
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.Alpha3))
+    //    {
+    //        StartCoroutine(LerpFunction(playerTurnPos));
+    //    }
+    //}
 
-    void LerpToNewPos()
+     public void LerpCardsToNewPos(Vector2 targetPos)
     {
-        //StartCoroutine(LerpFunction( ... ));
+        StartCoroutine(LerpFunction(targetPos));
     }
 
 
     
-    IEnumerator LerpFunction(Vector2 targetPos)
+    public IEnumerator LerpFunction(Vector2 targetPos)
     {
         float time = 0;
         Vector2 startPos = transform.position;
@@ -58,7 +58,13 @@ public class CardsAndDice : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+
         transform.position = targetPos;
         Debug.Log(lerpDuration);
+    }
+
+    void RollDice()
+    {
+            
     }
 }

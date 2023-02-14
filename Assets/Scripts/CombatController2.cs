@@ -4,23 +4,39 @@ using UnityEngine;
 
 public class CombatController2 : MonoBehaviour
 {
+    [SerializeField] CardsAndDice cardsAndDiceScript;
+
+   // [SerializeField] private Vector2 neutralCardPos;
+    [SerializeField] private Vector2 playerTurnCardPos;
+    [SerializeField] private Vector2 opponentTurnCardPos;
+
     // public for testing
     public bool playerTurn;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         playerTurn = true;
+        MoveCards(playerTurnCardPos);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
     // what shall this cs do?
-    //move camera
+    // 1 move cards
+    // 2 roll dice
     // switch to opponent ai turn at right time
+
+    void MoveCards(Vector2 targetPos)
+    {
+        cardsAndDiceScript.LerpCardsToNewPos(targetPos);
+    }
+
+    void RollDice()
+    {
+            
+    }
 }
