@@ -9,10 +9,12 @@ public class Dice : MonoBehaviour
     public int myResult;
     private Vector3 mouseOffset;
 
+
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
     }
+
 
     void Update()
     {
@@ -31,6 +33,7 @@ public class Dice : MonoBehaviour
 
         mouseOffset = transform.position - mousePosition;
     }
+
 
     void OnMouseDrag()
     {
