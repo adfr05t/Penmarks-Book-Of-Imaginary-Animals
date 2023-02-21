@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiceObject : MonoBehaviour
+public class CardObject : MonoBehaviour
 {
-    public DiceData dice;
-    private SpriteRenderer rend;
-    public int myResult;
+    [SerializeField] CardData card;
+    private Opponent currentOpponent;
 
     [SerializeField] private Vector2 offscreenPos;
     [SerializeField] private Vector2 playingPos;
@@ -16,40 +15,38 @@ public class DiceObject : MonoBehaviour
 
     void Start()
     {
-        rend = GetComponent<SpriteRenderer>();
+        currentOpponent = FindObjectOfType<Opponent>();
+        card.theOpponent = currentOpponent;
     }
 
-
-    public void Roll()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        myResult = dice.Roll();
-        rend.sprite = dice.resultSprite;
+        int numOnDie = collision.GetComponent<DiceObject>().myResult;
+        card.Action(numOnDie);
     }
+
 
     //TEST====================== working
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            MoveDice();
+            MoveCard();
         }
     }
 
-
-    public void MoveDice()
+    public void MoveCard()
     {
         StartCoroutine(DelayMove());
     }
 
-
     IEnumerator DelayMove()
     {
         yield return new WaitForSeconds(delayBeforeLerp);
-        StartCoroutine(LerpDice());
+        StartCoroutine(LerpCard());
     }
 
-
-    IEnumerator LerpDice()
+    IEnumerator LerpCard()
     {
         float time = 0;
         Vector2 startPos = transform.position;

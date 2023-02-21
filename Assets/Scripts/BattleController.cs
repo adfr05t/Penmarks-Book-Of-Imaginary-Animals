@@ -8,11 +8,17 @@ public class BattleController : MonoBehaviour
     public enum Phase { PlayerTurn, OpponentTurn };
     public Phase currentPhase;
 
+    [SerializeField] private DiceObject[] thePlayerDice;
+    [SerializeField] private DiceObject[] theOpponentDice;
+    [SerializeField] private CardObject[] thePlayerCards;
+    [SerializeField] private CardObject[] theOpponentCards;
+
 
     void Start()
     {
         
     }
+
 
     void Update()
     {
@@ -23,7 +29,7 @@ public class BattleController : MonoBehaviour
     }
 
 
-    void AdvanceTurn()
+    public void AdvanceTurn()
     {
         currentPhase++;
 
