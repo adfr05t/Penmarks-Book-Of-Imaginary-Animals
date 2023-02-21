@@ -13,6 +13,9 @@ public class BattleController : MonoBehaviour
     [SerializeField] private CardObject[] thePlayerCards;
     [SerializeField] private CardObject[] theOpponentCards;
 
+    [SerializeField] private GameObject endTurnButton;
+
+
 
     void Start()
     {
@@ -42,7 +45,8 @@ public class BattleController : MonoBehaviour
         switch (currentPhase)
         {
             case Phase.PlayerTurn:
-               // Debug.Log("player's turn");
+                // Debug.Log("player's turn");
+                endTurnButton.SetActive(true);
                 SetCorrectCardsAndDiceActive();
                 MoveCards();
                 RollDice();
@@ -50,7 +54,8 @@ public class BattleController : MonoBehaviour
                 break;
 
             case Phase.OpponentTurn:
-              //  Debug.Log("opponent's turn");
+                //  Debug.Log("opponent's turn");
+                endTurnButton.SetActive(false);
                 SetCorrectCardsAndDiceActive();
                 MoveCards();
                 RollDice();
