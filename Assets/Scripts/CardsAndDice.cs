@@ -9,11 +9,11 @@ public class CardsAndDice : MonoBehaviour
     [SerializeField] private DiceObject[] theOpponentDice;
 
 
-private void Start()
-{
-    RollAllDice();
+//private void Start()
+//{
+//    RollAllDice();
 
-}
+//}
 
     public void LerpCardsToNewPos(Vector2 targetPos)
     {
@@ -41,18 +41,18 @@ private void Start()
         }
 
         transform.position = targetPos;
-        RollAllDice();
+       // RollAllDice();
     }
 
-    void RollAllDice()
-    {
-        for (int i = 0; i < thePlayerDice.Length; i++)
-        {
-            thePlayerDice[i].Roll();
-        }
-        for (int i = 0; i < thePlayerDice.Length; i++)
-        {
-            theOpponentDice[i].Roll();
-        }
-    }
+    //void RollAllDice()
+    //{
+    //    for (int i = 0; i < thePlayerDice.Length; i++)
+    //    {
+    //        thePlayerDice[i].Roll();
+    //    }
+    //    for (int i = 0; i < thePlayerDice.Length; i++)
+    //    {
+    //        theOpponentDice[i].Roll();
+    //    }
+    //}
 }

@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 44713314}
+  - component: {fileID: 44713316}
   - component: {fileID: 44713315}
   m_Layer: 0
   m_Name: card (1)
@@ -207,6 +208,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &44713316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44713313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0551dc897fc3cba41a0c5118615b6f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}
+  playerCard: 0
+  offscreenPos: {x: 10.7, y: 1}
+  playingPos: {x: 0, y: -1}
+  delayBeforeLerp: 0.1
+  lerpDuration: 0.2
 --- !u!1 &58022289
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58022289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -2.78, z: 0}
+  m_LocalPosition: {x: -2, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -279,10 +298,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6296296, y: 1.6296296}
+    newSize: {x: 1.6296296, y: 1.6296296}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -330,15 +349,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1171161724, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6296296, y: 1.6296296}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &58022294
@@ -355,10 +374,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
   myResult: 0
-  offscreenPos: {x: 0, y: 0}
-  playingPos: {x: 0, y: 0}
+  offscreenPos: {x: -2, y: 6.5}
+  playingPos: {x: 2, y: 3.5}
   delayBeforeLerp: 0
-  lerpDuration: 0
+  lerpDuration: 0.4
 --- !u!1 &63659238
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134323003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9000006, y: -6.5, z: 0}
+  m_LocalPosition: {x: -6, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -570,15 +589,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1171161724, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6296296, y: 1.6296296}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &134323007
@@ -597,10 +616,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6296296, y: 1.6296296}
+    newSize: {x: 1.6296296, y: 1.6296296}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -642,10 +661,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
   myResult: 0
-  offscreenPos: {x: -1.900001, y: -6.5}
-  playingPos: {x: -1.900001, y: -2.78}
-  delayBeforeLerp: 0
-  lerpDuration: 0.55
+  offscreenPos: {x: -2, y: -6.5}
+  playingPos: {x: -2, y: -3.5}
+  delayBeforeLerp: 0.4
+  lerpDuration: 0.2
 --- !u!114 &134323010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,7 +1213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568225963}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.54, y: 0.9303962, z: 0}
+  m_LocalPosition: {x: -10.64, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1240,10 +1259,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 11400000, guid: 492eb9955d5e3234ba9b6145f55a114b, type: 2}
-  offscreenPos: {x: 0, y: 0}
-  playingPos: {x: 0, y: 0}
-  delayBeforeLerp: 0
-  lerpDuration: 0
+  playerCard: 1
+  offscreenPos: {x: -10.7, y: -1}
+  playingPos: {x: 0, y: 1}
+  delayBeforeLerp: 0.1
+  lerpDuration: 0.2
 --- !u!1 &597823479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597823479}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.76, y: 0.9303962, z: 0}
+  m_LocalPosition: {x: -4, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1369,10 +1389,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 11400000, guid: 53cd88686bce1124587f899a776262b6, type: 2}
-  offscreenPos: {x: 0, y: 0}
-  playingPos: {x: 0, y: 0}
+  playerCard: 1
+  offscreenPos: {x: -10.7, y: -1}
+  playingPos: {x: -4, y: 1}
   delayBeforeLerp: 0
-  lerpDuration: 0
+  lerpDuration: 0.1
 --- !u!1 &705716833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1538,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 717112651}
+  - component: {fileID: 717112653}
   - component: {fileID: 717112652}
   m_Layer: 0
   m_Name: card (2)
@@ -1592,6 +1614,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &717112653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717112650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0551dc897fc3cba41a0c5118615b6f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}
+  playerCard: 0
+  offscreenPos: {x: 10.7, y: 1}
+  playingPos: {x: 4, y: -1}
+  delayBeforeLerp: 0
+  lerpDuration: 0.1
 --- !u!1 &765480881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,6 +1641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765480882}
+  - component: {fileID: 765480884}
   - component: {fileID: 765480883}
   m_Layer: 0
   m_Name: card
@@ -1676,6 +1717,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &765480884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765480881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0551dc897fc3cba41a0c5118615b6f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}
+  playerCard: 0
+  offscreenPos: {x: 10.7, y: 1}
+  playingPos: {x: -4, y: -1}
+  delayBeforeLerp: 0.2
+  lerpDuration: 0.3
 --- !u!1 &940511015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,15 +1813,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000061321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.6, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 597823481}
   - {fileID: 568225965}
   - {fileID: 1153375753}
-  m_Father: {fileID: 1602365311}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1004328603
 GameObject:
@@ -1884,7 +1943,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013601257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07999992, y: -2.78, z: 0}
+  m_LocalPosition: {x: -4, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1928,10 +1987,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6296296, y: 1.6296296}
+    newSize: {x: 1.6296296, y: 1.6296296}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -1979,15 +2038,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1171161724, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6296296, y: 1.6296296}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1013601262
@@ -2004,10 +2063,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
   myResult: 0
-  offscreenPos: {x: 0, y: 0}
-  playingPos: {x: 0, y: 0}
-  delayBeforeLerp: 0
-  lerpDuration: 0
+  offscreenPos: {x: -4, y: 6.5}
+  playingPos: {x: 0, y: 3.5}
+  delayBeforeLerp: 0.2
+  lerpDuration: 0.4
 --- !u!1 &1039721955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,10 +2232,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPhase: 0
-  thePlayerDice: []
-  theOpponentDice: []
-  thePlayerCards: []
-  theOpponentCards: []
+  thePlayerDice:
+  - {fileID: 134323009}
+  - {fileID: 1118154497}
+  - {fileID: 2128588282}
+  theOpponentDice:
+  - {fileID: 1989630469}
+  - {fileID: 1013601262}
+  - {fileID: 58022294}
+  thePlayerCards:
+  - {fileID: 597823483}
+  - {fileID: 568225967}
+  - {fileID: 1153375755}
+  theOpponentCards:
+  - {fileID: 765480884}
+  - {fileID: 44713316}
+  - {fileID: 717112653}
 --- !u!4 &1090012494
 Transform:
   m_ObjectHideFlags: 0
@@ -2190,7 +2261,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1118154491
 GameObject:
@@ -2221,7 +2292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118154491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07999992, y: -6.5, z: 0}
+  m_LocalPosition: {x: -4, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2269,15 +2340,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1171161724, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6296296, y: 1.6296296}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1118154495
@@ -2296,10 +2367,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6296296, y: 1.6296296}
+    newSize: {x: 1.6296296, y: 1.6296296}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -2341,10 +2412,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
   myResult: 0
-  offscreenPos: {x: 0.07999992, y: -6.5}
-  playingPos: {x: 0.07999992, y: -2.78}
-  delayBeforeLerp: 0.3
-  lerpDuration: 0.55
+  offscreenPos: {x: -4, y: -6.5}
+  playingPos: {x: 0, y: -3.5}
+  delayBeforeLerp: 0.5
+  lerpDuration: 0.2
 --- !u!114 &1118154498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,7 +2507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153375751}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.786675, y: 0.9303962, z: 0}
+  m_LocalPosition: {x: 4, y: 1.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2482,10 +2553,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 11400000, guid: 3f106e6a8ddf4e54db6eaeee4021859c, type: 2}
-  offscreenPos: {x: 0, y: 0}
-  playingPos: {x: 0, y: 0}
-  delayBeforeLerp: 0
-  lerpDuration: 0
+  playerCard: 1
+  offscreenPos: {x: -10.7, y: -1}
+  playingPos: {x: 4, y: 1}
+  delayBeforeLerp: 0.2
+  lerpDuration: 0.3
 --- !u!1 &1516133741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,7 +2780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1602365311
 Transform:
   m_ObjectHideFlags: 0
@@ -2720,11 +2792,9 @@ Transform:
   m_LocalPosition: {x: -30.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1000061322}
-  - {fileID: 1675048109}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1602365312
 MonoBehaviour:
@@ -2770,7 +2840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610206572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.019999, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2778,7 +2848,7 @@ Transform:
   - {fileID: 1118154493}
   - {fileID: 2128588278}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1675048108
 GameObject:
@@ -2804,15 +2874,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675048108}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.75, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765480882}
   - {fileID: 44713314}
   - {fileID: 717112651}
-  m_Father: {fileID: 1602365311}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1840888295
 GameObject:
@@ -2973,7 +3043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986636769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2599983, y: 7.44, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2981,7 +3051,7 @@ Transform:
   - {fileID: 1013601258}
   - {fileID: 58022290}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989630464
 GameObject:
@@ -3011,7 +3081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989630464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9000006, y: -2.78, z: 0}
+  m_LocalPosition: {x: -6, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3055,10 +3125,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6296296, y: 1.6296296}
+    newSize: {x: 1.6296296, y: 1.6296296}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -3106,15 +3176,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1171161724, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6296296, y: 1.6296296}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1989630469
@@ -3131,10 +3201,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
   myResult: 0
-  offscreenPos: {x: 0, y: 0}
-  playingPos: {x: 0, y: 0}
-  delayBeforeLerp: 0
-  lerpDuration: 0
+  offscreenPos: {x: -6, y: 6.5}
+  playingPos: {x: -2, y: 3.5}
+  delayBeforeLerp: 0.4
+  lerpDuration: 0.4
 --- !u!1 &2128588276
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,7 +3234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128588276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -6.5, z: 0}
+  m_LocalPosition: {x: -2, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3212,15 +3282,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1171161724, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6296296, y: 1.6296296}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &2128588280
@@ -3239,10 +3309,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6296296, y: 1.6296296}
+    newSize: {x: 1.6296296, y: 1.6296296}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -3284,10 +3354,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
   myResult: 0
-  offscreenPos: {x: 2, y: -6.5}
-  playingPos: {x: 2, y: -2.78}
+  offscreenPos: {x: -6, y: -6.5}
+  playingPos: {x: 2, y: -3.5}
   delayBeforeLerp: 0.6
-  lerpDuration: 0.55
+  lerpDuration: 0.2
 --- !u!114 &2128588283
 MonoBehaviour:
   m_ObjectHideFlags: 0

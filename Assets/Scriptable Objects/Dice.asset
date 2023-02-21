@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633aa61ee3c1d1a4da7bf98439c23057, type: 3}
   m_Name: Dice
   m_EditorClassIdentifier: 
-  result: 2
   artwork:
-  - {fileID: -1997750831, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
-  - {fileID: 184936891, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
-  - {fileID: 66364179, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
-  - {fileID: 196951303, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
-  - {fileID: 1403905058, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
-  - {fileID: -1095967080, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
-  resultSprite: {fileID: 184936891, guid: 14e9a23b57d79b643aa3042271f81cc3, type: 3}
+  - {fileID: 1171161724, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
+  - {fileID: -1668655450, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
+  - {fileID: 711931489, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
+  - {fileID: -1129060584, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
+  - {fileID: -1629264406, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
+  - {fileID: 1692389324, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}
+  resultSprite: {fileID: 711931489, guid: 9f13f7fc3aa83ae4c985a45326d241fc, type: 3}

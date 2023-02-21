@@ -6,6 +6,8 @@ public class CardObject : MonoBehaviour
 {
     [SerializeField] CardData card;
     private Opponent currentOpponent;
+   // private Player thePlayer;
+    [SerializeField] private bool playerCard;
 
     [SerializeField] private Vector2 offscreenPos;
     [SerializeField] private Vector2 playingPos;
@@ -15,14 +17,23 @@ public class CardObject : MonoBehaviour
 
     void Start()
     {
-        currentOpponent = FindObjectOfType<Opponent>();
-        card.theOpponent = currentOpponent;
+        if (playerCard)
+        {
+            currentOpponent = FindObjectOfType<Opponent>();
+            card.theOpponent = currentOpponent;
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         int numOnDie = collision.GetComponent<DiceObject>().myResult;
         card.Action(numOnDie);
+    }
+
+    private void OnEnable()
+    {
+        transform.position = offscreenPos;
     }
 
 

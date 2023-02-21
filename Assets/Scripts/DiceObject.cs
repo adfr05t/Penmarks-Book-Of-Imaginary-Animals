@@ -26,13 +26,9 @@ public class DiceObject : MonoBehaviour
         rend.sprite = dice.resultSprite;
     }
 
-    //TEST====================== working
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            MoveDice();
-        }
+        transform.position = offscreenPos;
     }
 
 

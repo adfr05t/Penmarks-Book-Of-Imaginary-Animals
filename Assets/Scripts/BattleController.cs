@@ -16,7 +16,8 @@ public class BattleController : MonoBehaviour
 
     void Start()
     {
-        
+        currentPhase = Phase.OpponentTurn;
+        AdvanceTurn();
     }
 
 
@@ -41,14 +42,118 @@ public class BattleController : MonoBehaviour
         switch (currentPhase)
         {
             case Phase.PlayerTurn:
-                Debug.Log("player's turn");
-               // playerTurn.UpdateState();
+               // Debug.Log("player's turn");
+                SetCorrectCardsAndDiceActive();
+                MoveCards();
+                RollDice();
+                MoveDice();
                 break;
 
             case Phase.OpponentTurn:
-                Debug.Log("opponent's turn");
-                // opponentTurn.UpdateState();
+              //  Debug.Log("opponent's turn");
+                SetCorrectCardsAndDiceActive();
+                MoveCards();
+                RollDice();
+                MoveDice();
                 break;
+        }
+    }
+
+
+    void RollDice()
+    {
+        if (currentPhase == Phase.PlayerTurn)
+        {
+            foreach (var die in thePlayerDice)
+            {
+                die.Roll();
+            }
+        }
+        else if (currentPhase == Phase.OpponentTurn)
+        {
+            foreach (var die in theOpponentDice)
+            {
+                die.Roll();
+            }
+        }
+    }
+
+    void MoveDice()
+    {
+        if (currentPhase == Phase.PlayerTurn)
+        {
+            foreach (var die in thePlayerDice)
+            {
+                die.MoveDice();
+            }
+        }
+        else if (currentPhase == Phase.OpponentTurn)
+        {
+            foreach (var die in theOpponentDice)
+            {
+                die.MoveDice();
+            }
+        }
+    }
+
+    void MoveCards()
+    {
+        if (currentPhase == Phase.PlayerTurn)
+        {
+            foreach (var card in thePlayerCards)
+            {
+                card.MoveCard();
+            }
+        }
+        else if (currentPhase == Phase.OpponentTurn)
+        {
+            foreach (var card in theOpponentCards)
+            {
+                card.MoveCard();
+            }
+        }
+    }
+
+
+    void SetCorrectCardsAndDiceActive()
+    {
+        if (currentPhase == Phase.PlayerTurn)
+        {
+            foreach (var die in theOpponentDice)
+            {
+                die.gameObject.SetActive(false);
+            }
+            foreach (var card in theOpponentCards)
+            {
+                card.gameObject.SetActive(false);
+            }
+            foreach (var die in thePlayerDice)
+            {
+                die.gameObject.SetActive(true);
+            }
+            foreach (var card in thePlayerCards)
+            {
+                card.gameObject.SetActive(true);
+            }
+        }
+        else if (currentPhase == Phase.OpponentTurn)
+        {
+            foreach (var die in thePlayerDice)
+            {
+                die.gameObject.SetActive(false);
+            }
+            foreach (var card in thePlayerCards)
+            {
+                card.gameObject.SetActive(false);
+            }
+            foreach (var die in theOpponentDice)
+            {
+                die.gameObject.SetActive(true);
+            }
+            foreach (var card in theOpponentCards)
+            {
+                card.gameObject.SetActive(true);
+            }
         }
     }
 }
