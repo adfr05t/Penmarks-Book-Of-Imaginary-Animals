@@ -5,16 +5,22 @@ using UnityEngine;
 public class CardsAndDice : MonoBehaviour
 {
     private bool initialLerp = true;
-    [SerializeField] private PlayerDice[] thePlayerDice;
-    [SerializeField] private OpponentDice[] theOpponentDice;
+    [SerializeField] private DiceObject[] thePlayerDice;
+    [SerializeField] private DiceObject[] theOpponentDice;
 
 
-     public void LerpCardsToNewPos(Vector2 targetPos)
+private void Start()
+{
+    RollAllDice();
+
+}
+
+    public void LerpCardsToNewPos(Vector2 targetPos)
     {
         StartCoroutine(LerpFunction(targetPos));
     }
 
-    
+
     public IEnumerator LerpFunction(Vector2 targetPos)
     {
         float time = 0;

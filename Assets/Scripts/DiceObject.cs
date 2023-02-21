@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDice : MonoBehaviour
+public class DiceObject : MonoBehaviour
 {
     public DiceData dice;
     private SpriteRenderer rend;
     public int myResult;
-    private Vector3 mouseOffset;
 
 
     void Start()
@@ -18,7 +17,7 @@ public class PlayerDice : MonoBehaviour
 
     public void Roll()
     {
-            myResult = dice.Roll();
-            rend.sprite = dice.artwork[myResult - 1];
+        myResult = dice.Roll();
+        rend.sprite = dice.resultSprite;
     }
 }
