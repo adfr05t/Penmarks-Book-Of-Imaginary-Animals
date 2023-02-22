@@ -15,12 +15,13 @@ public class BattleController : MonoBehaviour
 
     [SerializeField] private GameObject endTurnButton;
 
+    [SerializeField] private float firstTurnDelay;
 
 
     void Start()
     {
         currentPhase = Phase.OpponentTurn;
-        AdvanceTurn();
+        StartCoroutine(DelayFirstTurn());
     }
 
 
@@ -160,5 +161,11 @@ public class BattleController : MonoBehaviour
                 card.gameObject.SetActive(true);
             }
         }
+    }
+
+    IEnumerator DelayFirstTurn()
+    {
+        yield return new WaitForSeconds(firstTurnDelay);
+        AdvanceTurn();
     }
 }
