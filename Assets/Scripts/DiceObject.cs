@@ -23,7 +23,7 @@ public class DiceObject : MonoBehaviour
     public void Roll()
     {
         myResult = dice.Roll();
-        rend.sprite = dice.resultSprite;
+        rend.sprite = dice.artwork[myResult - 1];
     }
 
     private void OnEnable()

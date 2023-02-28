@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35a74d83b3f3ef42ba9c38e0b87a156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
+  dice: {fileID: 11400000, guid: fe9a2002bfea7094ea3a7a356b746874, type: 2}
   myResult: 0
   offscreenPos: {x: 5, y: 6.5}
   playingPos: {x: 2, y: 3.85}
@@ -2061,7 +2061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35a74d83b3f3ef42ba9c38e0b87a156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
+  dice: {fileID: 11400000, guid: fe9a2002bfea7094ea3a7a356b746874, type: 2}
   myResult: 0
   offscreenPos: {x: 3, y: 6.5}
   playingPos: {x: 0, y: 3.85}
@@ -3285,7 +3285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35a74d83b3f3ef42ba9c38e0b87a156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dice: {fileID: 11400000, guid: f3144d2206b30424fa7b33b190705ce3, type: 2}
+  dice: {fileID: 11400000, guid: fe9a2002bfea7094ea3a7a356b746874, type: 2}
   myResult: 0
   offscreenPos: {x: 1, y: 6.5}
   playingPos: {x: -2, y: 3.85}
