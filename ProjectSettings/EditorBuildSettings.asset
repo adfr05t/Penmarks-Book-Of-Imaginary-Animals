@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CardsAndDice.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: 14b3deed5b805b34da75c15a3315da65
+  - enabled: 1
+    path: Assets/Scenes/Overworld-01.unity
+    guid: 616e4d1e8c47c9c46ac4c4a2f10c45c7
+  - enabled: 1
+    path: Assets/Scenes/CardCombat.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: cc5ffd2da7c9dc34380010f6aa77788a
   m_configObjects: {}

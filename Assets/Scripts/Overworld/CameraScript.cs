@@ -10,12 +10,8 @@ public class CameraScript : MonoBehaviour
     [SerializeField] private float maxLagOnYAxis;
     [SerializeField] private float speed;
 
-
-
-    void Start()
-    {
-        
-    }
+  //  [SerializeField] private float smoothing;
+   // private Vector3 velocity = Vector3.zero;
 
 
     void Update()
@@ -33,8 +29,11 @@ public class CameraScript : MonoBehaviour
     void MoveCamera()
     {
         float step = speed * Time.deltaTime;
+
         Vector3 targetPosition = new Vector3(targetToFollow.position.x, targetToFollow.position.y, transform.position.z);
-        // move sprite towards the target location
+
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+       // transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothing);
+
     }
 }
