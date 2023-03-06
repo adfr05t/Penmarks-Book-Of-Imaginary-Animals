@@ -9,8 +9,8 @@ public class CardObject : MonoBehaviour
    // private Player thePlayer;
     [SerializeField] private bool playerCard;
 
-    [SerializeField] private Vector2 offscreenPos;
-    [SerializeField] private Vector2 playingPos;
+    [SerializeField] private Vector3 offscreenPos;
+    [SerializeField] private Vector3 playingPos;
     [SerializeField] private float delayBeforeLerp;
     [SerializeField] private float lerpDuration;
 
@@ -60,11 +60,11 @@ public class CardObject : MonoBehaviour
     IEnumerator LerpCard()
     {
         float time = 0;
-        Vector2 startPos = transform.position;
+        Vector3 startPos = transform.position;
 
         while (time < lerpDuration)
         {
-            transform.position = Vector2.Lerp(startPos, playingPos, time / lerpDuration);
+            transform.position = Vector3.Lerp(startPos, playingPos, time / lerpDuration);
             time += Time.deltaTime;
             yield return null;
         }
