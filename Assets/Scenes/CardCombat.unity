@@ -222,8 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 0}
   playerCard: 0
-  offscreenPos: {x: 11.1, y: 1}
-  playingPos: {x: 0, y: 0}
+  offscreenPos: {x: 11.1, y: 1, z: 0}
+  playingPos: {x: 0, y: 0, z: 0}
   delayBeforeLerp: 0.1
   lerpDuration: 0.2
 --- !u!1 &58022289
@@ -1599,8 +1599,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 11400000, guid: 3f106e6a8ddf4e54db6eaeee4021859c, type: 2}
   playerCard: 1
-  offscreenPos: {x: -11.1, y: -1}
-  playingPos: {x: 0, y: 0}
+  offscreenPos: {x: -11.1, y: -1, z: 0}
+  playingPos: {x: 0, y: 0, z: 0}
   delayBeforeLerp: 0.1
   lerpDuration: 0.2
 --- !u!1 &597823479
@@ -1729,8 +1729,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 11400000, guid: 53cd88686bce1124587f899a776262b6, type: 2}
   playerCard: 1
-  offscreenPos: {x: -11.1, y: -1}
-  playingPos: {x: -4.3, y: 0}
+  offscreenPos: {x: -11.1, y: -1, z: 0}
+  playingPos: {x: -4.3, y: 0, z: 0}
   delayBeforeLerp: 0
   lerpDuration: 0.1
 --- !u!1 &608429802
@@ -2273,8 +2273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 0}
   playerCard: 0
-  offscreenPos: {x: 11.1, y: 1}
-  playingPos: {x: 4.3, y: 0}
+  offscreenPos: {x: 11.1, y: 1, z: 0}
+  playingPos: {x: 4.3, y: 0, z: 0}
   delayBeforeLerp: 0
   lerpDuration: 0.1
 --- !u!1 &765480881
@@ -2376,8 +2376,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 0}
   playerCard: 0
-  offscreenPos: {x: 11.1, y: 1}
-  playingPos: {x: -4.3, y: 0}
+  offscreenPos: {x: 11.1, y: 1, z: 0}
+  playingPos: {x: -4.3, y: 0, z: 0}
   delayBeforeLerp: 0.2
   lerpDuration: 0.3
 --- !u!1 &825073630
@@ -3408,8 +3408,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 11400000, guid: 3f106e6a8ddf4e54db6eaeee4021859c, type: 2}
   playerCard: 1
-  offscreenPos: {x: -11.1, y: -1}
-  playingPos: {x: 4.3, y: 0}
+  offscreenPos: {x: -11.1, y: -1, z: 0}
+  playingPos: {x: 4.3, y: 0, z: 0}
   delayBeforeLerp: 0.2
   lerpDuration: 0.3
 --- !u!1 &1203437108
@@ -4345,7 +4345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1677196898
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class CardData : ScriptableObject
     //public string description;
 
     //public Sprite artwork;
-    public Opponent theOpponent;
+ //           public Opponent theOpponent;
 
     public int damageDealt;
     
@@ -38,7 +38,7 @@ public class CardData : ScriptableObject
             {
                 case CardType.Attack:
                     
-                    theOpponent.AdjustHealth(-actionStrength);
+ //                     theOpponent.AdjustHealth(-actionStrength);
                     break;
             }
         }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class CardObject : MonoBehaviour
 {
     [SerializeField] CardData card;
-    private Opponent currentOpponent;
-   // private Player thePlayer;
+//             private Opponent currentOpponent; 
+    //private Player thePlayer;
     [SerializeField] private bool playerCard;
 
     [SerializeField] private Vector3 offscreenPos;
@@ -19,8 +19,9 @@ public class CardObject : MonoBehaviour
     {
         if (playerCard)
         {
-            currentOpponent = FindObjectOfType<Opponent>();
-            card.theOpponent = currentOpponent;
+ //              currentOpponent = FindObjectOfType<Opponent>(); 
+ //              card.theOpponent = currentOpponent;
+            // currently the adjust health function is called in card (CardData.cs) - should change!
         }
 
     }
