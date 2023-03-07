@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CardCombat.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: cc5ffd2da7c9dc34380010f6aa77788a
+    path: Assets/Scenes/CardCombat-01.unity
+    guid: 7eb9297a6f5afd340880eb20dfe662be
   m_configObjects: {}
