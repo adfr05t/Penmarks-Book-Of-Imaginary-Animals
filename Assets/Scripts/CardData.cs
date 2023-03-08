@@ -19,13 +19,12 @@ public class CardData : ScriptableObject
     //public string description;
 
     //public Sprite artwork;
- //           public Opponent theOpponent;
 
     public int damageDealt;
     
     
 
-    public void Action(int numOnDie) // pass in dice result
+    public void Action(int numOnDie, Health opponentHealth) // pass in dice result
     {
         if (DiceValid(numOnDie)) //pass dice result
         {
@@ -37,8 +36,7 @@ public class CardData : ScriptableObject
             switch (cardType)
             {
                 case CardType.Attack:
-                    
- //                     theOpponent.AdjustHealth(-actionStrength);
+                opponentHealth.AdjustHealth(-actionStrength);
                     break;
             }
         }

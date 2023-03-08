@@ -16,6 +16,5 @@ MonoBehaviour:
   diceTaken: 0
   diceTakenSpecifier: 0
   actionStrengthEqualsDieNum: 0
-  actionStrength: 0
-  theOpponent: {fileID: 0}
+  actionStrength: 1
   damageDealt: 0

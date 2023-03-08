@@ -8,11 +8,13 @@ public class CardObject : MonoBehaviour
 //             private Opponent currentOpponent; 
     //private Player thePlayer;
     [SerializeField] private bool playerCard;
-
+    [SerializeField] private Transform diceSlot;  
     [SerializeField] private Vector3 offscreenPos;
     [SerializeField] private Vector3 playingPos;
     [SerializeField] private float delayBeforeLerp;
     [SerializeField] private float lerpDuration;
+
+    public Health opponentHealth;
 
 
     void Start()
@@ -28,8 +30,12 @@ public class CardObject : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        int numOnDie = collision.GetComponent<DiceObject>().myResult;
-        card.Action(numOnDie);
+
+            Transform diceTransform = collision.gameObject.GetComponent<Transform>();
+            diceTransform.position = diceSlot.position;
+  
+            int numOnDie = collision.GetComponent<DiceObject>().myResult;
+            card.Action(numOnDie, opponentHealth);
     }
 
     private void OnEnable()

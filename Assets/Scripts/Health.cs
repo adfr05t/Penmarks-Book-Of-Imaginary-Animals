@@ -7,6 +7,7 @@ using TMPro;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private bool thisIsPlayersHealth;
     private int currentHealth;
     [SerializeField] private int maxHealth;
     private float healthBarUnits;
@@ -24,7 +25,8 @@ public class Health : MonoBehaviour
         healthBarUnits = (4.3f - 0.1f) / maxHealth;
     }
 
-// FOR TESTING ONLY:
+
+    // FOR TESTING ONLY:
     //private void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.H))
@@ -40,11 +42,32 @@ public class Health : MonoBehaviour
         UpdateHealthDisplay();
         // 0.1 is length of fill at zero health
         healthFill.size = new Vector2(0.1f + (currentHealth * healthBarUnits), healthFill.size.y);
+
+        if (currentHealth <= 0)
+        {
+            EndBattle();
+        }
+
     }
 
 
-    private void UpdateHealthDisplay()
+    void UpdateHealthDisplay()
     {
         currentHealthTextDisplay.text = currentHealth.ToString();
+    }
+
+
+    void EndBattle()
+    {
+            if (thisIsPlayersHealth)
+            {
+            // set game over canvas active
+            Debug.Log("GAME OVER");
+            }
+            else
+            {
+            // set win canvas active
+            Debug.Log("YOU WON!!");
+            }
     }
 }
