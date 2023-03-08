@@ -13,8 +13,14 @@ public class CardObject : MonoBehaviour
     [SerializeField] private Vector3 playingPos;
     [SerializeField] private float delayBeforeLerp;
     [SerializeField] private float lerpDuration;
+    // For reusable cards, only:
+    [SerializeField] private GameObject nextCard;
 
     public Health opponentHealth;
+    public Health myHealth;
+
+    [SerializeField] private Animator anim;
+
 
 
     void Start()
@@ -30,12 +36,33 @@ public class CardObject : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Transform diceTransform = collision.gameObject.GetComponent<Transform>();
+        diceTransform.position = diceSlot.position;
+        // make dice a child of this object
+        diceTransform.parent = transform;
+        //       Instantiate(thisCard, transform.position, Quaternion.identity);
+        //if (card.reusable)
+        //{
+        //    nextCard.SetActive(true);
+        //}
+        if (card.cardType == CardData.CardType.Attack)
+        {
+            Debug.Log("ATTACK");
+            anim.SetTrigger("CardUp");
 
-            Transform diceTransform = collision.gameObject.GetComponent<Transform>();
-            diceTransform.position = diceSlot.position;
-  
             int numOnDie = collision.GetComponent<DiceObject>().myResult;
             card.Action(numOnDie, opponentHealth);
+        }
+        else if (card.cardType == CardData.CardType.Heal)
+        {
+            Debug.Log("HEAL");
+
+            anim.SetTrigger("CardDown");
+
+            int numOnDie = collision.GetComponent<DiceObject>().myResult;
+            card.Action(numOnDie, myHealth);
+        }
+
     }
 
     private void OnEnable()

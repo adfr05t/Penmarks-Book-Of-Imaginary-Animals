@@ -11,6 +11,7 @@ public class BattleController : MonoBehaviour
     [SerializeField] private DiceObject[] thePlayerDice;
     [SerializeField] private DiceObject[] theOpponentDice;
     [SerializeField] private CardObject[] thePlayerCards;
+ //   [SerializeField] private GameObject[] thePlayerCardHolders;
     [SerializeField] private CardObject[] theOpponentCards;
 
     [SerializeField] private GameObject endTurnButton;
@@ -135,8 +136,13 @@ public class BattleController : MonoBehaviour
             }
             foreach (var die in thePlayerDice)
             {
+                die.transform.parent = null;
                 die.gameObject.SetActive(true);
             }
+            //foreach (var cardHolder in thePlayerCardHolders)
+            //{
+            //    cardHolder.SetActive(true);
+            //}
             foreach (var card in thePlayerCards)
             {
                 card.gameObject.SetActive(true);

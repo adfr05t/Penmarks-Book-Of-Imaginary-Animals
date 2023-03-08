@@ -5,13 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewCard", menuName = "Card")]
 public class CardData : ScriptableObject
 {
-    public enum CardType { Attack, Defence, Heal };
+    public enum CardType { Attack, Heal };
     public enum DiceTaken {Any, Min, Max, Specific, Odd, Even, ExceedTotal};
     
     public CardType cardType;
     public DiceTaken diceTaken;
     public int diceTakenSpecifier;
     public bool actionStrengthEqualsDieNum;
+    public bool reusable;
+
 
     public int actionStrength; // may or may not be dependant on dice result
 
