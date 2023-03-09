@@ -14,6 +14,8 @@ public class Health : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentHealthTextDisplay;
     [SerializeField] private TextMeshProUGUI maxHealthTextDisplay;
     [SerializeField] private SpriteRenderer healthFill;
+    [SerializeField] private BattleController theBattleController;
+
 
 
     void Start()
@@ -39,15 +41,24 @@ public class Health : MonoBehaviour
     public void AdjustHealth(int adjustment)
     {
         currentHealth += adjustment;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+
         UpdateHealthDisplay();
         // 0.1 is length of fill at zero health
         healthFill.size = new Vector2(0.1f + (currentHealth * healthBarUnits), healthFill.size.y);
 
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
             EndBattle();
         }
-
     }
 
 
@@ -61,13 +72,15 @@ public class Health : MonoBehaviour
     {
             if (thisIsPlayersHealth)
             {
-            // set game over canvas active
-            Debug.Log("GAME OVER");
+                // set game over canvas active
+                 Debug.Log("GAME OVER");
+                theBattleController.GameOver();
             }
             else
             {
-            // set win canvas active
-            Debug.Log("YOU WON!!");
+                // set win canvas active
+                Debug.Log("YOU WON!!");
+                theBattleController.YouWin();
             }
     }
 }

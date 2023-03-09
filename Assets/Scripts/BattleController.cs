@@ -18,6 +18,10 @@ public class BattleController : MonoBehaviour
 
     [SerializeField] private float firstTurnDelay;
 
+    [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private GameObject youWonCanvas;
+
+
 
     void Start()
     {
@@ -175,5 +179,16 @@ public class BattleController : MonoBehaviour
         AdvanceTurn();
     }
 
+
+    public void GameOver()
+    {
+        gameOverCanvas.SetActive(true);
+    }
+
+    public void YouWin()
+    {
+        youWonCanvas.SetActive(true);
+
+    }
 
 }

@@ -17,5 +17,5 @@ MonoBehaviour:
   diceTakenSpecifier: 3
   actionStrengthEqualsDieNum: 0
   reusable: 0
-  actionStrength: 0
-  damageDealt: -2
+  actionStrength: -2
+  damageDealt: 0

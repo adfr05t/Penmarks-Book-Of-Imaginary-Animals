@@ -13,20 +13,11 @@ public class CardData : ScriptableObject
     public int diceTakenSpecifier;
     public bool actionStrengthEqualsDieNum;
     public bool reusable;
-
-
     public int actionStrength; // may or may not be dependant on dice result
-
-    //public string nameOfCard;
-    //public string description;
-
-    //public Sprite artwork;
-
     public int damageDealt;
     
-    
 
-    public void Action(int numOnDie, Health opponentHealth) // pass in dice result
+    public void Action(int numOnDie, Health health) // pass in dice result
     {
         if (DiceValid(numOnDie)) //pass dice result
         {
@@ -34,13 +25,8 @@ public class CardData : ScriptableObject
             {
                 actionStrength = numOnDie;
             }
-
-            switch (cardType)
-            {
-                case CardType.Attack:
-                opponentHealth.AdjustHealth(-actionStrength);
-                    break;
-            }
+ 
+            health.AdjustHealth(-actionStrength);
         }
         else
         {
@@ -85,6 +71,4 @@ public class CardData : ScriptableObject
 
         return validity;
     }
-
-
 }
