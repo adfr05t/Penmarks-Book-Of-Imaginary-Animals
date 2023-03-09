@@ -27,6 +27,7 @@ public class CardData : ScriptableObject
             }
  
             health.AdjustHealth(-actionStrength);
+            Debug.Log("health adjusted");
         }
         else
         {

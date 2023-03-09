@@ -23,6 +23,7 @@ public class BattleController : MonoBehaviour
 
 
 
+
     void Start()
     {
         currentPhase = Phase.OpponentTurn;
@@ -66,8 +67,16 @@ public class BattleController : MonoBehaviour
                 MoveCards();
                 RollDice();
                 MoveDice();
+
+                EnemyMovementTest();
+
                 break;
         }
+    }
+
+    void EnemyMovementTest()
+    {
+            
     }
 
 
@@ -164,6 +173,7 @@ public class BattleController : MonoBehaviour
             }
             foreach (var die in theOpponentDice)
             {
+                die.transform.parent = null;
                 die.gameObject.SetActive(true);
             }
             foreach (var card in theOpponentCards)

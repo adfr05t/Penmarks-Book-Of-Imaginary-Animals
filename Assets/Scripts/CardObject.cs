@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CardObject : MonoBehaviour
 {
-    [SerializeField] CardData card;
+    public CardData card;
 //             private Opponent currentOpponent; 
     //private Player thePlayer;
     [SerializeField] private bool playerCard;

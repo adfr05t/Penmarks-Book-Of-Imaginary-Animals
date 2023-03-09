@@ -11,8 +11,12 @@ public class SpikyGrass : MonoBehaviour
     [SerializeField] private DiceObject[] myDice;
     [SerializeField] private CardObject[] myCards;
 
+
     [SerializeField] private float lerpDuration;
     [SerializeField] private bool moveInProgress;
+
+    [SerializeField] private Health playerHealth;
+
 
 
 
@@ -65,15 +69,24 @@ public class SpikyGrass : MonoBehaviour
             }
 
             die.transform.position = cardPos;
+        die.transform.parent = card.transform;
 
             moveInProgress = false;
 
         TriggerCardAnimation(card);
+
+        // delay this to sync with animation, and add a hurt anim to player
+        //    playerHealth.AdjustHealth()
+        card.card.Action(die.myResult, playerHealth);
+
+        Debug.Log(die.myResult);
+
+
     }
 
     void TriggerCardAnimation(CardObject card)
     {
-        card.GetComponent<Animator>().SetTrigger("CardAction");
+        card.GetComponentInParent<Animator>().SetTrigger("CardAction");
     }
 
 }

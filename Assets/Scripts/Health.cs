@@ -40,6 +40,7 @@ public class Health : MonoBehaviour
 
     public void AdjustHealth(int adjustment)
     {
+        Debug.Log("called");
         currentHealth += adjustment;
 
         if (currentHealth > maxHealth)
