@@ -81,7 +81,14 @@ public class Health : MonoBehaviour
             {
                 // set win canvas active
                 Debug.Log("YOU WON!!");
-                theBattleController.YouWin();
+            StartCoroutine(ShowYouWonCanvas());
             }
+    }
+
+    IEnumerator ShowYouWonCanvas()
+    {
+        yield return new WaitForSeconds(0.5f);
+                theBattleController.YouWin();
+
     }
 }

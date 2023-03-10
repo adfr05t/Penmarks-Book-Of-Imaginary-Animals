@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CardCombat-01.unity
     guid: 7eb9297a6f5afd340880eb20dfe662be
+  - enabled: 1
+    path: Assets/Scenes/Overworld-02.unity
+    guid: fd07cf3534bcfd645a6a36540abd928e
   m_configObjects: {}
