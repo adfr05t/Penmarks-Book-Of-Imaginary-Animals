@@ -2710,7 +2710,7 @@ MonoBehaviour:
   myResult: 0
   offscreenPos: {x: 5, y: 6.5}
   playingPos: {x: 0.5, y: 3.35}
-  delayBeforeLerp: 0.4
+  delayBeforeLerp: 0.6
   lerpDuration: 0.3
 --- !u!1 &1019388872
 GameObject:
@@ -3085,6 +3085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPhase: 0
+  theOpponent: {fileID: 2136307653}
   thePlayerDice:
   - {fileID: 134323009}
   - {fileID: 1118154497}
@@ -6070,7 +6071,7 @@ MonoBehaviour:
   myResult: 0
   offscreenPos: {x: 3, y: 6.5}
   playingPos: {x: -1.5, y: 3.35}
-  delayBeforeLerp: 0.2
+  delayBeforeLerp: 0.4
   lerpDuration: 0.3
 --- !u!1 &1990739530
 GameObject:
@@ -6440,6 +6441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679ec999e83c46f4883e06c6b0b48f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theBattleController: {fileID: 1090012493}
   myDice:
   - {fileID: 1989630469}
   - {fileID: 1013601262}
@@ -6449,6 +6451,9 @@ MonoBehaviour:
   lerpDuration: 0.4
   moveInProgress: 0
   playerHealth: {fileID: 695205743}
+  pauseLengthBetweenMoves: 0.6
+  pauseLengthAtStart: 2
+  pauseLengthAtEndOfTurn: 1
 --- !u!1 &2140614600
 GameObject:
   m_ObjectHideFlags: 0

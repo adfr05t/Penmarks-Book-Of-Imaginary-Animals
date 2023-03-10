@@ -7,7 +7,7 @@ public class BattleController : MonoBehaviour
     // other: start, won, lost, playerActive...
     public enum Phase { PlayerTurn, OpponentTurn };
     public Phase currentPhase;
-
+    [SerializeField] private Opponent theOpponent;
     [SerializeField] private DiceObject[] thePlayerDice;
     [SerializeField] private DiceObject[] theOpponentDice;
     [SerializeField] private CardObject[] thePlayerCards;
@@ -67,17 +67,12 @@ public class BattleController : MonoBehaviour
                 MoveCards();
                 RollDice();
                 MoveDice();
-
-                EnemyMovementTest();
-
+                theOpponent.StartMyTurn();
                 break;
         }
     }
 
-    void EnemyMovementTest()
-    {
-            
-    }
+
 
 
     void RollDice()

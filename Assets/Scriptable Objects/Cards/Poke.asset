@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Poke
   m_EditorClassIdentifier: 
   cardType: 0
-  diceTaken: 0
+  diceTaken: 4
   diceTakenSpecifier: 0
   actionStrengthEqualsDieNum: 0
   reusable: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 public class CardData : ScriptableObject
 {
     public enum CardType { Attack, Heal };
-    public enum DiceTaken {Any, Min, Max, Specific, Odd, Even, ExceedTotal};
+    public enum DiceTaken {Any, Min, Max, Specific, Odd, Even/*, ExceedTotal*/};
     
     public CardType cardType;
     public DiceTaken diceTaken;
@@ -35,7 +35,7 @@ public class CardData : ScriptableObject
         }
     }
 
-    bool DiceValid(int numOnDie)
+    public bool DiceValid(int numOnDie)
     {
         bool validity = false;
 
@@ -58,16 +58,19 @@ public class CardData : ScriptableObject
                 break;
 
             case DiceTaken.Odd:
-
+                validity = (numOnDie % 2 != 0) ? true : false;
+                Debug.Log("ODD------");
                 break;
 
             case DiceTaken.Even:
+                validity = (numOnDie % 2 == 0) ? true : false;
+                Debug.Log("EVEN------");
 
                 break;
 
-            case DiceTaken.ExceedTotal:
+            //case DiceTaken.ExceedTotal:
 
-                break;
+            //    break;
         }
 
         return validity;
