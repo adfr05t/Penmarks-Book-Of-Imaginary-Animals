@@ -1280,6 +1280,7 @@ MonoBehaviour:
   maxHealthTextDisplay: {fileID: 1039721957}
   healthFill: {fileID: 391665243}
   theBattleController: {fileID: 1090012493}
+  adjustmentDelay: 0.6
 --- !u!1 &537622335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2013,7 @@ MonoBehaviour:
   maxHealthTextDisplay: {fileID: 1683341487}
   healthFill: {fileID: 1571200875}
   theBattleController: {fileID: 1090012493}
+  adjustmentDelay: 0.6
 --- !u!1 &765480881
 GameObject:
   m_ObjectHideFlags: 0

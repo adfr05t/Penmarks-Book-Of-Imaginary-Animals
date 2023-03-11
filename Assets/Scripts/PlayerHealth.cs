@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int playerHealth;
     public int maxHealth;
+    [SerializeField] private float adjustmentDelay;
 
     [SerializeField] private TextMeshProUGUI healthDisplay;
 
@@ -16,8 +17,9 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealthDisplay();
     }
 
-    public void AdjustHealth(int adjustment)
+   public IEnumerator AdjustHealth(int adjustment)
     {
+        yield return new WaitForSeconds(adjustmentDelay);
         playerHealth += adjustment;
         UpdateHealthDisplay();
         // display updated playerHealth 

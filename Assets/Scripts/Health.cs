@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     [SerializeField] private TextMeshProUGUI maxHealthTextDisplay;
     [SerializeField] private SpriteRenderer healthFill;
     [SerializeField] private BattleController theBattleController;
-
+    [SerializeField] private float adjustmentDelay;
 
 
     void Start()
@@ -40,7 +40,6 @@ public class Health : MonoBehaviour
 
     public void AdjustHealth(int adjustment)
     {
-        Debug.Log("called");
         currentHealth += adjustment;
 
         if (currentHealth > maxHealth)
@@ -52,20 +51,23 @@ public class Health : MonoBehaviour
             currentHealth = 0;
         }
 
-        UpdateHealthDisplay();
+       StartCoroutine(UpdateHealthDisplay());
+
+    }
+
+
+    IEnumerator UpdateHealthDisplay()
+    {
+        yield return new WaitForSeconds(adjustmentDelay);
+
         // 0.1 is length of fill at zero health
         healthFill.size = new Vector2(0.1f + (currentHealth * healthBarUnits), healthFill.size.y);
+        currentHealthTextDisplay.text = currentHealth.ToString();
 
         if (currentHealth == 0)
         {
             EndBattle();
         }
-    }
-
-
-    void UpdateHealthDisplay()
-    {
-        currentHealthTextDisplay.text = currentHealth.ToString();
     }
 
 
